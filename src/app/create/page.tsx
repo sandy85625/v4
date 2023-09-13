@@ -14,13 +14,13 @@ const CreatePage = async (props: Props) => {
   }
   const isPro = await checkSubscription();
   return (
-    <div className="flex flex-col items-start max-w-xl px-8 mx-auto my-16 sm:px-0">
-      <h1 className="self-center text-3xl font-bold text-center sm:text-6xl">
+    <div className="flex flex-col items-start max-w-xl px-4 mx-auto my-8 sm:px-8 sm:my-16 md:px-0">
+      <h1 className="self-center text-2xl font-bold text-center sm:text-4xl md:text-5xl lg:text-6xl">
         Script writing made Easy!
       </h1>
-      <div className="flex p-4 mt-5 border-none bg-secondary">
-        <InfoIcon className="w-12 h-12 mr-3 text-blue-400" />
-        <div>
+      <div className="flex flex-wrap p-2 mt-4 border-none bg-secondary sm:flex-nowrap sm:p-4 sm:mt-5">
+        <InfoIcon className="w-8 h-8 mr-2 text-blue-400 sm:w-10 sm:h-10 sm:mr-3 md:w-12 md:h-12" />
+        <div className="text-sm sm:text-base md:text-lg">
           Enter in a script title, or what you want to write a script about. Then enter a
           list of scenes, which are the specifics you want. And our AI
           will generate the script for you!

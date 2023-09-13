@@ -38,11 +38,11 @@ const ConfirmSubIdeas = ({ topic }: Props) => {
       {topic.ideas.map((idea, ideaIndex) => {
         return (
           <div key={idea.id} className="mt-5">
-            <h2 className="text-sm uppercase text-secondary-foreground/60">
+            <h2 className="text-sm uppercase text-secondary-foreground/60 mx-2">
               Idea {ideaIndex + 1}
             </h2>
-            <h3 className="text-2xl font-bold">{idea.name}</h3>
-            <div className="mt-3">
+            <h3 className="text-2xl font-bold mx-2 ">{idea.name}</h3>
+            <div className="mt-3 mx-2">
               {idea.subideas.map((subidea, subideaIndex) => {
                 return (
                   <SubideaCard

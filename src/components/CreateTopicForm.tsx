@@ -131,13 +131,13 @@ const CreateTopicForm = ({ isPro }: Props) => {
             })}
           </AnimatePresence>
 
-          <div className="flex items-center justify-center mt-4">
-            <Separator className="flex-[1]" />
-            <div className="mx-4">
+          <div className="flex items-center justify-center mt-4 flex-col sm:flex-row">
+            <Separator className="mb-2 sm:mb-0 sm:flex-[1]" />
+            <div className="flex flex-col gap-2 sm:gap-0 sm:flex-row mx-4">
               <Button
                 type="button"
                 variant="secondary"
-                className="font-semibold"
+                className="font-semibold mb-2 sm:mb-0 sm:mr-4"
                 onClick={() => {
                   form.setValue("ideas", [...form.watch("ideas"), ""]);
                 }}
@@ -149,7 +149,7 @@ const CreateTopicForm = ({ isPro }: Props) => {
               <Button
                 type="button"
                 variant="secondary"
-                className="font-semibold ml-2"
+                className="font-semibold"
                 onClick={() => {
                   form.setValue("ideas", form.watch("ideas").slice(0, -1));
                 }}
@@ -158,7 +158,7 @@ const CreateTopicForm = ({ isPro }: Props) => {
                 <Trash className="w-4 h-4 ml-2 text-red-500" />
               </Button>
             </div>
-            <Separator className="flex-[1]" />
+            <Separator className="mt-2 sm:mt-0 sm:flex-[1]" />
           </div>
           <Button
             disabled={isLoading}

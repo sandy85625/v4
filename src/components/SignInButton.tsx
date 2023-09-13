@@ -12,8 +12,9 @@ const SignInButton = (props: Props) => {
       onClick={() => {
         signIn("google");
       }}
+      className="bg-blue-500 hover:bg-blue-600 text-white px-2 sm:px-4 py-1 sm:py-1 rounded"
     >
-      Sign In
+      SignIn
     </Button>
   );
 };

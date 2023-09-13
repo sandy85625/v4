@@ -23,7 +23,7 @@ const SubscriptionAction = (props: Props) => {
     }
   };
   return (
-    <div className="flex flex-col items-center w-1/2 p-4 mx-auto mt-4 rounded-md bg-secondary">
+    <div className="flex flex-col items-center w-full sm:w-1/2 p-4 mx-auto mt-4 rounded-md bg-secondary">
       {data?.user.credits} / 10 Free Generations
       <Progress
         className="mt-2"

@@ -15,7 +15,7 @@ const MainSummary = ({
   subideaIndex,
 }: Props) => {
   return (
-    <div className="flex-[2] mt-16">
+    <div className="flex-[2] sm:mt-16">
       <h4 className="text-sm uppercase text-secondary-foreground/60">
         Idea {ideaIndex + 1} &bull; Sub-Idea {subideaIndex + 1}
       </h4>
