@@ -59,7 +59,6 @@ const CreateTopicForm = ({ isPro }: Props) => {
         router.push(`/create/${topic_id}`);
       },
       onError: (error) => {
-        console.error(error);
         toast({
           title: "Error",
           description: "Something went wrong",

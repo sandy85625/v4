@@ -17,6 +17,8 @@ const UserAvatar = ({ user }: Props) => {
             src={user.image}
             alt="user profile"
             referrerPolicy="no-referrer"
+            layout="fixed"
+            objectFit="fill"
           />
         </div>
       ) : (

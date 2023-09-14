@@ -5,19 +5,26 @@ import { Progress } from "./ui/progress";
 import { Button } from "./ui/button";
 import { Zap } from "lucide-react";
 import axios from "axios";
+import { useToast } from "./ui/use-toast";
 
 type Props = {};
 
 const SubscriptionAction = (props: Props) => {
   const { data } = useSession();
   const [loading, setLoading] = React.useState(false);
+  const { toast } = useToast();
+
   const handleSubscribe = async () => {
     setLoading(true);
     try {
       const response = await axios.get("/api/stripe");
       window.location.href = response.data.url;
     } catch (error) {
-      console.log("error", error);
+      toast({
+        title: "Billing Error",
+        description: "Please retry! If fund was deducted from your account, it will be refunded within 3-4 business days.",
+        variant: "destructive",
+      });
     } finally {
       setLoading(false);
     }

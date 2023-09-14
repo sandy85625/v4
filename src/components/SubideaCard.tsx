@@ -58,7 +58,6 @@ const SubideaCard = React.forwardRef<SubideaCardHandler, Props>(
             addChapterIdToSet();
           },
           onError: (error) => {
-            console.error(error);
             setSuccess(false);
             toast({
               title: "Error",

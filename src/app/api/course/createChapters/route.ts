@@ -92,6 +92,5 @@ export async function POST(req: Request, res: Response) {
     if (error instanceof ZodError) {
       return new NextResponse("invalid body", { status: 400 });
     }
-    console.error(error);
   }
 }
