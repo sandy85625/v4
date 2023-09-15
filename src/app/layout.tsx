@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import { Provider } from "@/components/Providers";
 import { Toaster } from "@/components/ui/toaster";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 
 const lexend = Lexend({ subsets: ["latin"] });
 
@@ -21,6 +22,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://contents.cafe" />
+      </Head>
       <body className={cn(lexend.className, "antialiased flex flex-col min-h-screen pt-16")}>
           <Provider>
               <Navbar />
