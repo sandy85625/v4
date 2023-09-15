@@ -5,7 +5,7 @@ import HeroComponent from "@/components/HeroComponent";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Content.cafe | Brainstorm Ideas for your content",
+  title: "Contents.cafe | Brainstorm Ideas for your content",
   description: 'Generate Content Ideas using AI. Influencers, Content Creators, Marketers, Advertisers can use it to generate content ideas for their media channels.'
 };
 

@@ -13,7 +13,7 @@ type Props = {
 };
 
 export const metadata: Metadata = {
-  title: "Generate Content Ideas | Content.cafe",
+  title: "Generate Content Ideas | Contents.cafe",
   description: 'Generate Content Ideas using AI. Influencers, Content Creators, Marketers, Advertisers can use it to generate content ideas for their media channels.'
 };
 

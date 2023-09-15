@@ -6,7 +6,7 @@ import React from "react";
 type Props = {};
 
 export const metadata: Metadata = {
-  title: "Settings | Content.cafe",
+  title: "Settings | Contents.cafe",
   description: 'Generate Content Ideas using AI. Influencers, Content Creators, Marketers, Advertisers can use it to generate content ideas for their media channels.'
 };
 
