@@ -137,7 +137,7 @@ export async function strict_output(
 
       return list_input ? output : output[0];
     } catch (e) {
-        if(num_tries <= 10) num_tries += 1;
+        if(num_tries <= 6) num_tries += 1;
         error_msg = `\n\nResult: ${res}\n\nError message: ${e}`;
     }
   }
