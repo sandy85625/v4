@@ -1,6 +1,8 @@
 import SignInButton from '@/components/SignInButton';
+import { getAuthSession } from '@/lib/auth';
 import { ChevronDown } from 'lucide-react';
 import { Metadata } from 'next';
+import { redirect } from 'next/navigation';
 
 import React from 'react'
 
@@ -12,7 +14,11 @@ export const metadata: Metadata = {
   };
 
 const SignInComponent
- = (props: Props) => {
+ = async (props: Props) => {
+  const session = await getAuthSession();
+  if (session?.user) {
+    return redirect("/create");
+  }
   return (
     <div className='flex-grow'>
         <div className="flex flex-col h-screen items-center justify-center space-y-4">
