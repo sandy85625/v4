@@ -1,8 +1,15 @@
 import SubscriptionButton from "@/components/SubscriptionButton";
 import { checkSubscription } from "@/lib/subscription";
+import { Metadata } from "next";
 import React from "react";
 
 type Props = {};
+
+export const metadata: Metadata = {
+  title: "Settings | Content.cafe",
+  description: 'Generate Content Ideas using AI. Influencers, Content Creators, Marketers, Advertisers can use it to generate content ideas for their media channels.'
+};
+
 
 const SettingsPage = async (props: Props) => {
   const isPro = await checkSubscription();

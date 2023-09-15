@@ -2,6 +2,7 @@ import ConfirmChapters from "@/components/ConfirmSubideas";
 import { getAuthSession } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import { Info } from "lucide-react";
+import { Metadata } from "next";
 import { redirect } from "next/navigation";
 import React from "react";
 
@@ -9,6 +10,11 @@ type Props = {
   params: {
     topicId: string;
   };
+};
+
+export const metadata: Metadata = {
+  title: "Generate Content Ideas | Content.cafe",
+  description: 'Generate Content Ideas using AI. Influencers, Content Creators, Marketers, Advertisers can use it to generate content ideas for their media channels.'
 };
 
 const CreateSubideas = async ({ params: { topicId } }: Props) => {

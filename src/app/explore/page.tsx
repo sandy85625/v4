@@ -1,9 +1,14 @@
 import ExploreTopicCard from "@/components/ExploreTopicCard";
 import { prisma } from "@/lib/db";
-import Link from "next/link";
+import { Metadata } from "next";
 import React from "react";
 
 type Props = {};
+
+export const metadata: Metadata = {
+  title: "Explore Content Ideas | Content.cafe",
+  description: 'Generate Content Ideas using AI. Influencers, Content Creators, Marketers, Advertisers can use it to generate content ideas for their media channels.'
+};
 
 const ExplorePage = async (props: Props) => {
   const topics = await prisma.topic.findMany({

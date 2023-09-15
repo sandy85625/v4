@@ -4,8 +4,14 @@ import { redirect } from "next/navigation";
 import { InfoIcon } from "lucide-react";
 import CreateTopicForm from "@/components/CreateTopicForm";
 import { checkSubscription } from "@/lib/subscription";
+import { Metadata } from "next";
 
 type Props = {};
+
+export const metadata: Metadata = {
+  title: "Generate Content Ideas | Content.cafe",
+  description: 'Generate Content Ideas using AI. Influencers, Content Creators, Marketers, Advertisers can use it to generate content ideas for their media channels.'
+};
 
 const CreatePage = async (props: Props) => {
   const session = await getAuthSession();

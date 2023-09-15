@@ -1,7 +1,14 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 
 interface Props {
 }
+
+export const metadata: Metadata = {
+  title: "Help Center | Content.cafe",
+  description: 'Generate Content Ideas using AI. Influencers, Content Creators, Marketers, Advertisers can use it to generate content ideas for their media channels.'
+};
+
 
 const HelpComponent: React.FC<Props> = (props) => {
   return (

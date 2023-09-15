@@ -2,11 +2,17 @@ import { prisma } from "@/lib/db";
 import { redirect } from "next/navigation";
 import React from "react";
 import TopicPageComponent from "@/components/TopicPageComponent";
+import { Metadata } from "next";
 
 type Props = {
   params: {
     slug: string[];
   };
+};
+
+export const metadata: Metadata = {
+  title: "Explore Content Ideas | Content.cafe",
+  description: 'Generate Content Ideas using AI. Influencers, Content Creators, Marketers, Advertisers can use it to generate content ideas for their media channels.'
 };
 
 const TopicPage = async ({ params: { slug } }: Props) => {

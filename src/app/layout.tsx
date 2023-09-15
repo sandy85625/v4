@@ -10,8 +10,8 @@ import Footer from "@/components/Footer";
 const lexend = Lexend({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "v4",
-  description: 'v4'
+  title: "Content.cafe | Brainstorm content Ideas using AI for your social medias, Advertisments, Marketing campaign and more!",
+  description: 'Generate Content Ideas using AI. Influencers, Content Creators, Marketers, Advertisers can use it to generate content ideas for their media channels.'
 };
 
 export default function RootLayout({

@@ -1,5 +1,12 @@
+import { Metadata } from 'next';
 import React from 'react';
 
+export const metadata: Metadata = {
+    title: "Privacy Policy | Content.cafe",
+    description: 'Generate Content Ideas using AI. Influencers, Content Creators, Marketers, Advertisers can use it to generate content ideas for their media channels.'
+  };
+  
+  
 const PrivacyStatement: React.FC = () => {
   return (
     <div className="px-6 py-8">
