@@ -88,16 +88,21 @@ const themeLinks = (theme: string, session: Session | null) => {
       label: "Explore",
       href: "/explore",
       classes: theme === 'light' ? "hover:bg-black hover:text-white mx-5" : "hover:bg-white hover:text-black mr-5"
+    },
+    {
+      label: "Generate Content Ideas",
+      href: "/create",
+      classes: theme === 'light' ? "hover:bg-black hover:text-white mx-5" : "hover:bg-white hover:text-black mr-5"
+    },
+    {
+      label: "Help Center",
+      href: "/help",
+      classes: theme === 'light' ? "hover:bg-black hover:text-white mx-5" : "hover:bg-white hover:text-black mr-5"
     }
   ];
 
   if (session?.user) {
     baseLinks.push(
-      {
-        label: "Generate Script",
-        href: "/create",
-        classes: theme === 'light' ? "hover:bg-black hover:text-white mx-5" : "hover:bg-white hover:text-black mr-5"
-      },
       {
         label: "Settings",
         href: "/settings",

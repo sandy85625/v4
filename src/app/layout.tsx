@@ -5,6 +5,7 @@ import { Lexend } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import { Provider } from "@/components/Providers";
 import { Toaster } from "@/components/ui/toaster";
+import Footer from "@/components/Footer";
 
 const lexend = Lexend({ subsets: ["latin"] });
 
@@ -20,13 +21,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(lexend.className, "antialiased min-h-screen pt-16")}>
-        <Provider>
-          <Navbar />
-          {children}
-          <Toaster />
-        </Provider>
+      <body className={cn(lexend.className, "antialiased flex flex-col min-h-screen pt-16")}>
+          <Provider>
+              <Navbar />
+              <div className="flex-grow">
+                  {children}
+              </div>
+              <Toaster />
+              <Footer />
+          </Provider>
       </body>
-    </html>
+  </html>
   );
 }

@@ -40,23 +40,25 @@ const HeroComponent: React.FC = () => {
 
 
     return (
-        <div className='h-screen'>
+        <div className='h-full'>
             <div className="flex flex-col md:flex-row p-6">
                 {/* Image on the left */}
-                <div className="relative w-full md:mr-4 md:w-1/2 h-56 md:h-96 mb-4 md:mb-0">
-                    <Image src="/hero.jpg" className='rounded' alt="Mascot Logo" layout="fill" objectFit="cover" />
+                <div className="relative w-full md:mr-10 md:w-1/2 h-56 md:h-96 mb-4 md:mb-0">
+                    <Image src="/hero.jpg" className='rounded' alt="logo" layout="fill" objectFit="cover" />
                 </div>
 
                 {/* Content on the right */}
-                <div className="md:w-1/2 flex flex-col items-center justify-center md:items-start">
+                <div className="md:w-1/2 flex flex-col items-center justify-center text-center md:text-left md:items-start">
+                    <p className='text-sm md:text-lg mb-4 md:mb-8'>AI powered Content Idea brainstorming tool</p>
                     <h1 className="text-2xl md:text-4xl mb-2">
-                        Never run out of Content Ideas for your<br /> <span className="text-blue-500">{platforms[currentPlatform]}</span> anymore!
+                        Never run out of Content Ideas for your<br /> 
+                        <span className="text-blue-500">{platforms[currentPlatform]}</span> anymore!
                     </h1>
 
                     {/* Button Component */}
-                    <div className='flex flex-col md:flex-row'>
+                    <div className='flex flex-col items-center justify-center md:flex-row '>
                         {/* Explore Button */}
-                        <div className="flex items-center md:px-2">
+                        <div className="flex items-center">
                             <div 
                                 onClick={() => {
                                     setLoading(true)
@@ -68,7 +70,7 @@ const HeroComponent: React.FC = () => {
                                     <Loader2 className="animate-spin" />
                                 ) : (
                                     <>
-                                        Explore
+                                        Explore Content Ideas
                                         <ChevronRight className="w-6 h-6 ml-1 group-hover:text-white" />
                                     </>
                                 )}
@@ -87,7 +89,7 @@ const HeroComponent: React.FC = () => {
                                     <Loader2 className="animate-spin" />
                                 ) : (
                                     <>
-                                        Generate using AI
+                                        Try for Free
                                         <ChevronRight className="w-6 h-6 ml-1 group-hover:text-white" />
                                     </>
                                 )}
