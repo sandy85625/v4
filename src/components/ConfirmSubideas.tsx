@@ -16,14 +16,17 @@ type Props = {
 };
 
 const ConfirmSubIdeas = ({ topic }: Props) => {
-  const [loading, setLoading] = React.useState(false);
-  const subideaRefs: Record<string, React.RefObject<SubideaCardHandler>> = {};
-  topic.ideas.forEach((idea) => {
-    idea.subideas.forEach((subidea) => {
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      subideaRefs[subidea.id] = React.useRef(null);
+  const subideaRefs = React.useMemo(() => {
+    let refs: { [key: string]: React.RefObject<SubideaCardHandler> } = {};
+    topic.ideas.forEach((idea) => {
+        idea.subideas.forEach((subidea) => {
+            refs[subidea.id] = React.createRef();
+        });
     });
-  });
+    return refs;
+  }, [topic.ideas]);
+
+  const [loading, setLoading] = React.useState(false);
   const [completedSubideas, setCompletedSubideas] = React.useState<Set<String>>(
     new Set()
   );
