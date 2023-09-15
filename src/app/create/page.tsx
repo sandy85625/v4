@@ -10,7 +10,7 @@ type Props = {};
 const CreatePage = async (props: Props) => {
   const session = await getAuthSession();
   if (!session?.user) {
-    return redirect("/explore");
+    return redirect("/signin");
   }
   const isPro = await checkSubscription();
   return (

@@ -35,9 +35,9 @@ const Navbar = (props: Props) => {
       <div className="flex items-center justify-between h-full gap-2 px-8 mx-auto max-w-7xl">
         
         {/* Brand Logo */}
-        <Link href="/explore" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <p className="rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-[2px] dark:border-white">
-            Contents.Cafe
+            contents.cafe
           </p>
         </Link>
 
