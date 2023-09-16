@@ -22,7 +22,7 @@ const SubscriptionAction = (props: Props) => {
     } catch (error) {
       toast({
         title: "Billing Error",
-        description: "Please retry! If fund was deducted from your account, it will be refunded within 3-4 business days.",
+        description: `${error}`,
         variant: "destructive",
       });
     } finally {
