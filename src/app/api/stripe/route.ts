@@ -39,12 +39,12 @@ export async function GET() {
       line_items: [
         {
           price_data: {
-            currency: "USD",
+            currency: "INR",
             product_data: {
-              name: "Learning Journey Pro",
-              description: "unlimited course generation!",
+              name: "contents.cafe",
+              description: "Unlimited content idea generation!",
             },
-            unit_amount: 2000,
+            unit_amount: 12000,
             recurring: {
               interval: "month",
             },
