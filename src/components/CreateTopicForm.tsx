@@ -60,8 +60,8 @@ const CreateTopicForm = ({ isPro }: Props) => {
       },
       onError: (error) => {
         toast({
-          title: "Error",
-          description: "Something went wrong",
+          title: "You have used-up all free tier!",
+          description: "Please upgrade for unlimited access! Happy brainstorming!",
           variant: "destructive",
         });
       },
