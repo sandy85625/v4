@@ -22,9 +22,7 @@ const TopicPage = async ({ params: { slug } }: Props) => {
     include: {
       ideas: {
         include: {
-          subideas: {
-            include: {  likes: true },
-          },
+          subideas: true,
         },
       },
     },

@@ -54,10 +54,13 @@ export async function POST(req: Request, res: Response) {
     //   }),
     // });
 
+    // Ensure summary is not null or undefined
+    const sanitizedSummary = summary || "";
+
     await prisma.subidea.update({
       where: { id: subideaId },
       data: {
-        summary: summary,
+        summary: sanitizedSummary,
       },
     });
 
