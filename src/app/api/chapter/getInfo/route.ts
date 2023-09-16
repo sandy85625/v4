@@ -54,8 +54,10 @@ export async function POST(req: Request, res: Response) {
     //   }),
     // });
 
-    // Ensure summary is not null or undefined
-    const sanitizedSummary = summary || "";
+    const MAX_LENGTH = 3000;
+
+    // Ensure summary is defined and truncate if it's too long
+    const sanitizedSummary = (summary || "").substring(0, MAX_LENGTH);
 
     await prisma.subidea.update({
       where: { id: subideaId },
